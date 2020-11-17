@@ -1,0 +1,22 @@
+{% from "./thumbnail_macro.html" import Thumb %}
+{% extends './base/base.html'%}
+{% block content %}
+<section class="jumbotron text-center" style="background: linear-gradient(45deg, #fd9292, transparent);">
+  <div class="container">
+      <h1 class="jumbotron-heading">Sistema de monitoramento  de vagasautomatizado</h1>
+      <p class="lead text-muted">Projeto de conclusão de curso utilizando arduino e sensores</p>
+      <p>
+        <a href="#" class="btn btn-primary my-2">Clique aqui para acessar o video demonstrativo</a>
+      </p>
+    </div>
+  </section>
+  <div class="album py-5 bg-light">
+    <div class="container">
+      <div class="row">
+        {% for nome in ['Sistema - Manutenção Veicular','Site - Manutenção Veicular','Sistema de Aprovação e gestão de postagem'] %}
+            {{ Thumb(nome,"Clique abaixo e saiba mais sobre:" + nome) }}
+        {% endfor%}
+      </div>
+    </div>
+  </div>
+{% endblock %}
